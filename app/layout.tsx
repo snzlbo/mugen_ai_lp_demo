@@ -1,6 +1,5 @@
 import { AppBar } from '@/components/parts/app-bar';
 import type { Metadata } from 'next';
-import { ThemeProvider } from 'next-themes';
 import { Noto_Sans_JP, Noto_Sans_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -31,18 +30,11 @@ export default function RootLayout({
       <body
         className={`${notoSans.variable} ${notoMono.variable} flex min-h-screen flex-col antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <AppBar />
-          <main className="flex min-h-screen grow flex-col space-y-2 bg-gradient-to-b from-[#c9e8ff] to-[#89bcff] px-12 py-6">
-            {/* <Bread /> */}
-            <div>{children}</div>
-          </main>
-        </ThemeProvider>
+        <AppBar />
+        <main className="flex min-h-screen grow flex-col space-y-2 bg-gradient-to-b from-[#c9e8ff] to-[#89bcff] px-12 py-6">
+          {/* <Bread /> */}
+          <div>{children}</div>
+        </main>
       </body>
     </html>
   );
