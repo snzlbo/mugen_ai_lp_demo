@@ -1,15 +1,10 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+import { usePathname } from 'next/navigation';
 
 export function Bread() {
+  const pathName = usePathname();
   return (
-    <Breadcrumb>
+    <Breadcrumb className="mb-8">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink className="text-[#212121]" href="/">

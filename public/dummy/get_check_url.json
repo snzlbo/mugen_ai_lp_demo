@@ -1,0 +1,19 @@
+[
+  "",
+  {
+    "label": "✅",
+    "confidences": null
+  },
+  {
+    "https://www.dentsudigital.co.jp/": "/dummy/10.png",
+    "https://www.dentsu.co.jp/": "/dummy/1.png",
+    "https://dentsu-ho.com/": "/dummy/2.png",
+    "https://www.dentsusoken.com/": "/dummy/3.png",
+    "https://www.dentsulive.co.jp/": "/dummy/4.png",
+    "https://www.dentsu-crx.co.jp/": "/dummy/5.png",
+    "https://www.septeni-holdings.co.jp/": "/dummy/6.png",
+    "https://www.dentsu-pmp.co.jp/": "/dummy/7.png",
+    "https://www.dentsuprc.co.jp/": "/dummy/8.png",
+    "https://www.dc1.dentsu.co.jp/jp/": "/dummy/9.png"
+  }
+]
