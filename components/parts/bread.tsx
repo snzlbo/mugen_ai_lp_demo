@@ -22,9 +22,18 @@ export function Bread() {
       <BreadcrumbList>
         {links.map((link, index) => (
           <BreadcrumbItem key={index}>
-            <BreadcrumbLink className="text-[#212121]" href={link.href}>
-              {link.label}
-            </BreadcrumbLink>
+            {index === links.length - 1 ? (
+              <BreadcrumbPage className="text-[#212121]">
+                {link.label}
+              </BreadcrumbPage>
+            ) : (
+              <>
+                <BreadcrumbLink className="text-[#212121]" href={link.href}>
+                  {link.label}
+                </BreadcrumbLink>
+                <BreadcrumbSeparator />
+              </>
+            )}
           </BreadcrumbItem>
         ))}
       </BreadcrumbList>

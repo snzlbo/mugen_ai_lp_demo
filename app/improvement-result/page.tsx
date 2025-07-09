@@ -25,7 +25,7 @@ function SimpleAccordionItem({
   title,
   children,
   open,
-  onClick,
+onClick,
 }: SimpleAccordionItemProps) {
   return (
     <div>

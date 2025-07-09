@@ -11,14 +11,12 @@ import { useStateStore } from '@/store/state';
 import { useUserStore } from '@/store/user';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 export default function Home() {
   const { tempImagesLoading, getScoreLoading } = useStateStore();
   const { tempImages, downloadData } = useResultStore();
   const { setDummyMode, dummyMode } = useGlobalStore();
   const { user } = useUserStore();
-  const router = useRouter();
 
   useEffect(() => {
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
@@ -27,12 +25,6 @@ export default function Home() {
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
   }, []);
-
-  useEffect(() => {
-    if (downloadData) {
-      router.push('/improvement-result');
-    }
-  });
 
   return (
     <div className="flex h-full grow flex-col space-y-8">
