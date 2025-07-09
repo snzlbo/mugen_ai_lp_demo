@@ -1,5 +1,4 @@
 import { AppBar } from '@/components/parts/app-bar';
-import { Bread } from '@/components/parts/bread';
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import { Noto_Sans_JP, Noto_Sans_Mono } from 'next/font/google';
