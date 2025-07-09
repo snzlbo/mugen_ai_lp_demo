@@ -203,11 +203,13 @@ export default function ImprovementProposal() {
             height={800}
             className="ml-8"
           /> */}
-          <img
+          <Image
+            width={0}
+            height={0}
             src="/screenshot.png"
             alt="ss"
             className="ml-8 h-[4182px] w-[375px]"
-          ></img>
+          ></Image>
 
           <div className="flex flex-col space-y-10">
             <div className="w-[630px] rounded-xl border-gray-200 bg-white px-10 py-6">
@@ -412,11 +414,13 @@ export default function ImprovementProposal() {
 
                 <div className="mr-[-25px] ml-[-25px] border-b"></div>
                 <div className="mt-2 ml-[-8px] flex items-center">
-                  <img
+                  <Image
+                    height={0}
+                    width={0}
                     src="/reload.svg"
                     alt="ss"
-                    className="h-7 w-7 cursor-pointer"
-                  ></img>
+                    className="size-7 cursor-pointer"
+                  ></Image>
                   <h3 className="text-[11px] text-[#777777]">リセット</h3>
                 </div>
               </div>
@@ -425,49 +429,49 @@ export default function ImprovementProposal() {
                 <LuArrowDownUp />
               </div>
 
-              <h2 className="mb-2 py-2 text-base font-bold">商品/サービスの特徴</h2>
+              <h2 className="mb-2 py-2 text-base font-bold">
+                商品/サービスの特徴
+              </h2>
               <div className="-mx-10 mb-6 border-b" />
-                  <div className="overflow-x-auto">
-                    <table className="mb-6 w-full table-fixed border border-gray-200 text-[13px]">
-                      <tbody className="text-xs">
-                        <tr>
-                          <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
-                            見出し
-                          </td>
-                          <td className="border border-gray-200 p-2">
-                            デジタルソリューションの役割
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
-                            内容
-                          </td>
-                          <td className="border border-gray-200 p-2">
-                            革新的なAI技術を活用し、企業の変革を支援します。この技術は意思決定を迅速化し、顧客体験の向上をサポートします。また、効率的なデータ分析により、戦略的な事業の推進を可能にします。さらに、柔軟なシステムがビジネスの成長を促進します。
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
-                            見出し
-                          </td>
-                          <td className="border border-gray-200 p-2">
-                            マーケティングのデジタル革新
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
-                            内容
-                          </td>
-                          <td className="border border-gray-200 p-2">
-                            最新のテクノロジーを活用し、ターゲットとなる顧客層へのアプローチを革新します。デジタル広告の効果を最大化するため、データに基づく戦略を策定します。これにより、顧客とのエンゲージメントを強化し、ブランド価値の向上を図ります。当社はさらに、複雑なマーケティングの統合を支援し、成果を出すことに注力しています。
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-              <div>
-
+              <div className="overflow-x-auto">
+                <table className="mb-6 w-full table-fixed border border-gray-200 text-[13px]">
+                  <tbody className="text-xs">
+                    <tr>
+                      <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
+                        見出し
+                      </td>
+                      <td className="border border-gray-200 p-2">
+                        デジタルソリューションの役割
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
+                        内容
+                      </td>
+                      <td className="border border-gray-200 p-2">
+                        革新的なAI技術を活用し、企業の変革を支援します。この技術は意思決定を迅速化し、顧客体験の向上をサポートします。また、効率的なデータ分析により、戦略的な事業の推進を可能にします。さらに、柔軟なシステムがビジネスの成長を促進します。
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
+                        見出し
+                      </td>
+                      <td className="border border-gray-200 p-2">
+                        マーケティングのデジタル革新
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="w-[124px] border border-gray-200 bg-gray-50 p-2 font-semibold">
+                        内容
+                      </td>
+                      <td className="border border-gray-200 p-2">
+                        最新のテクノロジーを活用し、ターゲットとなる顧客層へのアプローチを革新します。デジタル広告の効果を最大化するため、データに基づく戦略を策定します。これにより、顧客とのエンゲージメントを強化し、ブランド価値の向上を図ります。当社はさらに、複雑なマーケティングの統合を支援し、成果を出すことに注力しています。
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+              <div></div>
 
               <div>
                 <SimpleAccordionItem

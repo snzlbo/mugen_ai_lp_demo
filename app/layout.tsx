@@ -1,6 +1,7 @@
-import { AuthWrapper } from '@/components/auth-wrapper';
-import { Toaster } from '@/components/ui/sonner';
+import { AppBar } from '@/components/parts/app-bar';
+import { Bread } from '@/components/parts/bread';
 import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
 import { Noto_Sans_JP, Noto_Sans_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col antialiased`}
+        className={`${notoSans.variable} ${notoMono.variable} flex min-h-screen flex-col antialiased`}
       >
         <ThemeProvider
           attribute="class"
