@@ -12,19 +12,25 @@ export function Bread() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink className="text-zinc-700" href="/">
+          <BreadcrumbLink className="text-[#212121]" href="/">
             TOP
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink className="text-zinc-700" href="/">
-            ∞AI LP
+          <BreadcrumbLink className="text-[#212121]" href="/">
+            競合分析
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbPage className="text-zinc-950">競合分析</BreadcrumbPage>
+          <BreadcrumbLink className="text-[#212121]" href="/">
+            訴求テーマの確認
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator />
+        <BreadcrumbItem>
+          <BreadcrumbPage className="text-[#777777]">改善案作成結果</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

@@ -39,7 +39,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <AppBar />
-          <main className="flex grow flex-col space-y-2 bg-gradient-to-br from-blue-300 to-blue-400 p-4">
+          <main className="flex grow flex-col space-y-2 min-h-screen bg-gradient-to-b from-[#c9e8ff] to-[#89bcff] px-12 py-6">
             <Bread />
             <div>{children}</div>
           </main>
