@@ -9,33 +9,24 @@ import {
 } from '@/components/ui/breadcrumb';
 
 export function Bread() {
-  // const pathName = usePathname();
+  const links = [
+    { href: '/', label: 'TOP' },
+    { href: '/', label: '∞AI LP' },
+    { href: '/', label: '競合分析' },
+    { href: '/', label: '競合分析結果' },
+    { href: '/', label: '改善案生成' },
+    { href: '/', label: '改善案生成結果' },
+  ];
   return (
     <Breadcrumb className="mb-8">
       <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink className="text-[#212121]" href="/">
-            TOP
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbLink className="text-[#212121]" href="/">
-            競合分析
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbLink className="text-[#212121]" href="/">
-            訴求テーマの確認
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage className="text-[#777777]">
-            改善案作成結果
-          </BreadcrumbPage>
-        </BreadcrumbItem>
+        {links.map((link, index) => (
+          <BreadcrumbItem key={index}>
+            <BreadcrumbLink className="text-[#212121]" href={link.href}>
+              {link.label}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        ))}
       </BreadcrumbList>
     </Breadcrumb>
   );
