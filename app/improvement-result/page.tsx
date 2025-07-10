@@ -41,6 +41,7 @@ interface Items {
   index: number;
   show: boolean;
   content: JSX.Element;
+  imgSrc: string;
 }
 
 export default function ImprovementProposal() {
@@ -52,6 +53,7 @@ export default function ImprovementProposal() {
       index: 0,
       show: true,
       content: Item1Table(),
+      imgSrc: '/improvement-result/image1.png',
     },
     {
       title: '商品/サービスの特徴',
@@ -59,6 +61,7 @@ export default function ImprovementProposal() {
       index: 1,
       show: true,
       content: Item2Table(),
+      imgSrc: '/improvement-result/image2.png',
     },
     {
       title: '問題提起/共感',
@@ -66,6 +69,7 @@ export default function ImprovementProposal() {
       index: 2,
       show: true,
       content: Item3Table(),
+      imgSrc: '/improvement-result/image3.png',
     },
   ]);
 
@@ -149,8 +153,8 @@ export default function ImprovementProposal() {
               <h2 className="text-xl font-bold">改善案（モックアップ）</h2>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="default" size="icon" className="size-8">
-                    <HiQuestionMarkCircle />
+                  <Button variant="ghost" size="icon" className="size-8">
+                    <HiQuestionMarkCircle fill='#777777'/>
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
@@ -171,13 +175,18 @@ export default function ImprovementProposal() {
           </div>
 
           <div className="grid grid-cols-3 gap-6">
-            <Image
-              width={0}
-              height={0}
-              src="/screenshot.png"
-              alt="ss"
-              className="col-span-1 h-auto w-full"
-            ></Image>
+            <div className="col-span-1 flex flex-col">
+              {displayItems.map((item, index) => (
+                <Image
+                  key={index}
+                  height={0}
+                  width={375}
+                  src={item.imgSrc}
+                  alt={item.title}
+                  className="h-auto w-full"
+                />
+              ))}
+            </div>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -202,11 +211,10 @@ export default function ImprovementProposal() {
                     >
                       <div className="flex w-full flex-row items-center justify-between">
                         <p className="text-sm">{item.title}</p>
-                        <div></div>
                         <div className="flex flex-row space-x-1">
                           <Button
                             size="icon"
-                            variant="outline"
+                            variant="ghost"
                             className="size-6"
                             disabled={item.index === 0}
                             onClick={(e) => {
@@ -218,7 +226,7 @@ export default function ImprovementProposal() {
                           </Button>
                           <Button
                             size="icon"
-                            variant="outline"
+                            variant="ghost"
                             className="size-6"
                             disabled={item.index === displayItems.length - 1}
                             onClick={(e) => {
@@ -230,7 +238,7 @@ export default function ImprovementProposal() {
                           </Button>
                           <Button
                             size="icon"
-                            variant="outline"
+                            variant="ghost"
                             className="size-6"
                             onClick={(e) => {
                               e.stopPropagation();
@@ -249,7 +257,14 @@ export default function ImprovementProposal() {
             </DropdownMenu>
 
             <div className="col-span-2 flex flex-col space-y-10">
-              {displayItems.map((item, index) => item.show && <div key={index} className='transition-all duration-300'>{item.content}</div>)}
+              {displayItems.map(
+                (item, index) =>
+                  item.show && (
+                    <div key={index} className="transition-all duration-300">
+                      {item.content}
+                    </div>
+                  ),
+              )}
             </div>
           </div>
         </div>

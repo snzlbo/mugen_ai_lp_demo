@@ -102,8 +102,8 @@ export default function Item1Table() {
                   </p>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="outline" size="icon" className="size-8">
-                        <GlobeIcon />
+                      <Button variant="outline" size="icon" className="size-5">
+                        <GlobeIcon className="size-3" stroke="#777" />
                       </Button>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -149,8 +149,8 @@ export default function Item1Table() {
                   <p>AI技術で次のステップを踏み出す</p>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="outline" size="icon" className="size-8">
-                        <LightbulbIcon />
+                      <Button variant="outline" size="icon" className="size-5">
+                        <LightbulbIcon className="size-3" stroke="#777" />
                       </Button>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -182,9 +182,9 @@ export default function Item1Table() {
                     AI技術のテーマを反映した未来的な都市の写真に、デジタルデータやフローを上から重ねてください。
                   </p>
                   <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button variant="outline" size="icon" className="size-8">
-                        <GlobeIcon />
+                    <TooltipTrigger asChild disabled>
+                      <Button variant="outline" size="icon" className="size-5">
+                        <GlobeIcon className="size-3" stroke="#ccc" />
                       </Button>
                     </TooltipTrigger>
                     <TooltipContent>
