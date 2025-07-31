@@ -5,6 +5,7 @@ import Item1Table from '@/components/pages/improvement-result/item1-table';
 import Item2Table from '@/components/pages/improvement-result/item2-table';
 import Item3Table from '@/components/pages/improvement-result/item3-table';
 import SummaryTable from '@/components/pages/improvement-result/summary-table';
+import { Bread } from '@/components/parts/bread';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -104,19 +105,22 @@ export default function ImprovementProposal() {
 
   return (
     <div className="flex flex-col space-y-10">
+      <Bread />
       <div className="flex items-center justify-between">
-        <h2 className="mt-5 text-2xl font-bold">改善案生成結果</h2>
-        <div className="flex space-x-2">
-          <Button variant="secondary">ダウンロード</Button>
-          <Button>
-            ダウンロード
-            <DownloadIcon />
+        <h2 className="text-2xl font-bold">改善案生成結果</h2>
+        <div className="flex gap-3">
+          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-6 text-[12px] font-semibold text-[#212121] shadow-none hover:bg-white hover:text-[#212121]">
+            レギュレーションチェック
+          </Button>
+          <Button className="cursor-pointer flex h-10 min-w-[192px] items-center justify-center gap-2 text-[12px] rounded-full bg-[#212121] pl-[24px] font-semibold text-white shadow-none pr-[5px]">
+          改善案をダウンロード
+            <DownloadIcon className="h-5 w-5" />
           </Button>
         </div>
       </div>
 
       <AnalysisTable />
-      <div className="space-y-6 rounded-xl bg-[#edf6fd]">
+      <div className="space-y-6 rounded-xl bg-[#f3fafd]">
         <Tabs
           value={tab}
           onValueChange={setTab}
@@ -154,7 +158,7 @@ export default function ImprovementProposal() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button variant="ghost" size="icon" className="size-8">
-                    <HiQuestionMarkCircle fill='#777777'/>
+                    <HiQuestionMarkCircle fill="#777777" />
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
