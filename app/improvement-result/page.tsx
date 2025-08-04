@@ -1,6 +1,7 @@
 'use client';
 
 import AnalysisTable from '@/components/pages/improvement-result/analysis-table';
+import { LPMockupColumn } from '@/components/pages/improvement-result/hero-feature';
 import Item1Table from '@/components/pages/improvement-result/item1-table';
 import Item2Table from '@/components/pages/improvement-result/item2-table';
 import Item3Table from '@/components/pages/improvement-result/item3-table';
@@ -31,7 +32,7 @@ import {
   Eye,
   EyeOff,
 } from 'lucide-react';
-import Image from 'next/image';
+
 import { JSX, useState } from 'react';
 import { HiQuestionMarkCircle } from 'react-icons/hi';
 
@@ -73,7 +74,9 @@ export default function ImprovementProposal() {
       imgSrc: '/improvement-result/image3.png',
     },
   ]);
-
+  const [heroImage, setHeroImage] = useState(
+    '/placeholder.svg?height=400&width=400',
+  );
   const handleDisplayItemsVisibility = (index: number) => {
     setDisplayItems((prevItems) =>
       prevItems.map((item) =>
@@ -112,8 +115,8 @@ export default function ImprovementProposal() {
           <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-6 text-[12px] font-semibold text-[#212121] shadow-none hover:bg-white hover:text-[#212121]">
             レギュレーションチェック
           </Button>
-          <Button className="cursor-pointer flex h-10 min-w-[192px] items-center justify-center gap-2 text-[12px] rounded-full bg-[#212121] pl-[24px] font-semibold text-white shadow-none pr-[5px]">
-          改善案をダウンロード
+          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#212121] pr-[5px] pl-[24px] text-[12px] font-semibold text-white shadow-none">
+            改善案をダウンロード
             <DownloadIcon className="h-5 w-5" />
           </Button>
         </div>
@@ -179,7 +182,7 @@ export default function ImprovementProposal() {
           </div>
 
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-1 flex flex-col">
+            {/* <div className="col-span-1 flex flex-col">
               {displayItems.map((item, index) => (
                 <Image
                   key={index}
@@ -190,6 +193,20 @@ export default function ImprovementProposal() {
                   className="h-auto w-full"
                 />
               ))}
+            </div> */}
+
+            <div className="col-span-1 flex flex-col items-center">
+              <LPMockupColumn
+                heroImage={heroImage}
+                onHeroImgChange={(file) => {
+                  const reader = new FileReader();
+                  reader.onload = (e) => {
+                    if (e.target?.result)
+                      setHeroImage(e.target.result as string);
+                  };
+                  reader.readAsDataURL(file);
+                }}
+              />
             </div>
 
             <DropdownMenu>
