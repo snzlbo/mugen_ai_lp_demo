@@ -1,7 +1,7 @@
 'use client';
 
 import AnalysisTable from '@/components/pages/improvement-result/analysis-table';
-import { LPMockupColumn } from '@/components/pages/improvement-result/hero-feature';
+import { LeftsideColumn } from '@/components/pages/improvement-result/hero-feature';
 import Item1Table from '@/components/pages/improvement-result/item1-table';
 import Item2Table from '@/components/pages/improvement-result/item2-table';
 import Item3Table from '@/components/pages/improvement-result/item3-table';
@@ -75,7 +75,7 @@ export default function ImprovementProposal() {
     },
   ]);
   const [heroImage, setHeroImage] = useState(
-    '/placeholder.svg?height=400&width=400',
+    '/heroImage.svg?height=400&width=400',
   );
   const handleDisplayItemsVisibility = (index: number) => {
     setDisplayItems((prevItems) =>
@@ -196,7 +196,7 @@ export default function ImprovementProposal() {
             </div> */}
 
             <div className="col-span-1 flex flex-col items-center">
-              <LPMockupColumn
+              <LeftsideColumn
                 heroImage={heroImage}
                 onHeroImgChange={(file) => {
                   const reader = new FileReader();

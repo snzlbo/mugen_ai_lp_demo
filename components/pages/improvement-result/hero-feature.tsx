@@ -1,13 +1,15 @@
 import Image from 'next/image';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 
-export const LPMockupColumn: React.FC<{
+export const LeftsideColumn: React.FC<{
   heroImage: string;
   onHeroImgChange: (file: File) => void;
 }> = ({ heroImage, onHeroImgChange }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const PLACEHOLDER = '/herolmage.svg';
+  const PLACEHOLDER = '/heroImage.svg';
   const imgSrc = heroImage && heroImage !== '' ? heroImage : PLACEHOLDER;
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <div className="mx-auto flex w-[400px] flex-col overflow-hidden bg-white">
@@ -18,9 +20,42 @@ export const LPMockupColumn: React.FC<{
             DIGITAL
           </div>
           <div className="flex items-center gap-4 text-white">
-            <span className="text-2xl">🔍</span>
-            <span className="text-2xl">✉</span>
-            <span className="text-6xl text-[22px]">☰</span>
+            <div className="group relative inline-block">
+              <span className="pointer-events-none absolute inset-0 z-10 h-5 w-5 rounded bg-[#111111] opacity-0 transition-opacity duration-500 group-hover:opacity-30"></span>
+              <span className="z-10 cursor-pointer text-2xl transition-colors duration-500 group-hover:text-[#b4b4b4]">
+                🔍
+              </span>
+            </div>
+            <span className="cursor-pointer text-2xl duration-500 hover:text-[#b4b4b4] hover:duration-500">
+              ✉
+            </span>
+            <button
+  className="relative w-4 cursor-pointer h-4.5 ml-2 flex items-center justify-center"
+  onClick={() => setOpen((o) => !o)}
+  aria-label="Toggle menu"
+>
+  <span
+    className={`absolute bg-white transition-all duration-300 w-6 h-[2.5]
+      ${open
+        ? "rotate-45 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        : "rotate-0 left-1/2 -translate-x-1/2"
+      }`}
+  />
+  <span
+    className={`absolute bg-white transition-all duration-300 w-6 h-[2.5]
+      ${open
+        ? "opacity-0 top-0.2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        : "opacity-100 top-0.5 left-1/2 -translate-x-1/2"
+      }`}
+  />
+  <span
+    className={`absolute bg-white transition-all duration-300 w-6 h-[2.5]
+      ${open
+        ? "-rotate-45 top-0.3 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        : "rotate-0 top-3.5 left-1/2 -translate-x-1/2"
+      }`}
+  />
+</button>
           </div>
         </div>
 
@@ -39,7 +74,7 @@ export const LPMockupColumn: React.FC<{
               alt="AIイメージ"
               fill
               priority
-              className="h-full w-full object-cover object-top"
+              className="h-full w-full object-cover"
             />
             <button
               className="absolute top-2 right-2 cursor-pointer rounded bg-[#2575e6] px-4 py-2.5 text-xs text-white"
@@ -96,7 +131,7 @@ export const LPMockupColumn: React.FC<{
             <div className="mb-7 text-center text-xl font-semibold text-[#444]">
               競争力を高めるためにAI戦略をスタート
             </div>
-            <button className="mb-12 h-[70px] w-[276px] cursor-pointer bg-[#191919] py-4 text-2xl font-semibold text-white hover:bg-[#333]">
+            <button className="mb-12 h-[70px] w-[276px] transform cursor-pointer bg-[#191919] py-4 text-2xl font-semibold text-white transition-all duration-300 hover:-translate-y-[3px] hover:bg-[#333]">
               今すぐAI対策を強化
             </button>
           </div>
