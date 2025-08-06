@@ -30,32 +30,32 @@ export const LeftsideColumn: React.FC<{
               ✉
             </span>
             <button
-  className="relative w-4 cursor-pointer h-4.5 ml-2 flex items-center justify-center"
-  onClick={() => setOpen((o) => !o)}
-  aria-label="Toggle menu"
->
-  <span
-    className={`absolute bg-white transition-all duration-300 w-6 h-[2.5]
-      ${open
-        ? "rotate-45 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        : "rotate-0 left-1/2 -translate-x-1/2"
-      }`}
-  />
-  <span
-    className={`absolute bg-white transition-all duration-300 w-6 h-[2.5]
-      ${open
-        ? "opacity-0 top-0.2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        : "opacity-100 top-0.5 left-1/2 -translate-x-1/2"
-      }`}
-  />
-  <span
-    className={`absolute bg-white transition-all duration-300 w-6 h-[2.5]
-      ${open
-        ? "-rotate-45 top-0.3 left-1/2 -translate-x-1/2 -translate-y-1/2"
-        : "rotate-0 top-3.5 left-1/2 -translate-x-1/2"
-      }`}
-  />
-</button>
+              className="relative ml-2 flex h-4.5 w-4 cursor-pointer items-center justify-center"
+              onClick={() => setOpen((o) => !o)}
+              aria-label="Toggle menu"
+            >
+              <span
+                className={`absolute h-[2.5] w-6 bg-white transition-all duration-400 ${
+                  open
+                    ? 'left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45'
+                    : 'left-1/2 -translate-x-1/2 rotate-0'
+                }`}
+              />
+              <span
+                className={`absolute h-[2.5] w-6 bg-white transition-all duration-400 ${
+                  open
+                    ? 'top-0.2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0'
+                    : 'top-0.5 left-1/2 -translate-x-1/2 opacity-100'
+                }`}
+              />
+              <span
+                className={`absolute h-[2.5] w-6 bg-white transition-all duration-400 ${
+                  open
+                    ? 'top-0.3 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45'
+                    : 'top-3.5 left-1/2 -translate-x-1/2 rotate-0'
+                }`}
+              />
+            </button>
           </div>
         </div>
 

@@ -23,14 +23,14 @@ export default function AnalysisTable() {
         <TableHeader>
           <TableRow>
             <TableHead
-              className="text-foreground border-r border-b border-[#ccc] bg-[#dbeefa] text-start text-lg font-semibold"
+              className="text-foreground border-r border-b border-[#ccc] bg-[#D6EBF7] text-start text-lg font-semibold"
               rowSpan={2}
               colSpan={3}
             >
               クロスSWOT分析
             </TableHead>
             <TableHead
-              className="text-foreground border-b border-[#ccc] bg-[#d1e9f7] text-center text-[14px] font-bold"
+              className="text-foreground border-b border-[#ccc] bg-[#CDE7F5] text-center text-[14px] font-bold"
               colSpan={6}
             >
               内部要因
@@ -40,7 +40,7 @@ export default function AnalysisTable() {
             <TableHead
               colSpan={3}
               rowSpan={1}
-              className="text-foreground h-auto border-r border-b border-[#ccc] bg-[#e6f0fa] px-4! py-3! text-center font-bold"
+              className="text-foreground h-auto border-r border-b border-[#ccc] bg-[#E2F0F9] px-4! py-3! text-center font-bold"
             >
               <h1 className="text-lg font-semibold">Strength 強み</h1>
               <p className="text-[11px] font-medium">
@@ -49,7 +49,7 @@ export default function AnalysisTable() {
             </TableHead>
             <TableHead
               colSpan={3}
-              className="text-foreground h-auto border-r border-b border-[#ccc] bg-[#e6f0fa] px-4! py-3! text-center font-bold"
+              className="text-foreground h-auto border-r border-b border-[#ccc] bg-[#E2F0F9] px-4! py-3! text-center font-bold"
             >
               <h1 className="text-lg font-semibold">Weakness 弱み</h1>
               <p className="text-[11px] font-medium">
@@ -61,14 +61,14 @@ export default function AnalysisTable() {
         <TableBody>
           <TableRow className="w-full">
             <TableCell
-              className="text-foreground border-r border-[#ccc] bg-[#d1e9f7] align-middle text-[14px] font-bold py-[8px] px-[16px]"
+              className="text-foreground border-r border-[#ccc] bg-[#CDE7F5] align-middle text-[14px] font-bold py-[8px] px-[16px]"
               rowSpan={2}
               colSpan={1}
             >
               外部要因
             </TableCell>
             <TableCell
-              className="space-y-2 border-r border-b border-[#ccc] bg-[#e6f0fa] text-center align-middle font-bold px-[16px] py-[8px]"
+              className="space-y-2 border-r border-b border-[#ccc] bg-[#E2F0F9] text-center align-middle font-bold px-[16px] py-[8px]"
               colSpan={2}
             >
               <p className="text-lg font-semibold">Opportunity</p>
@@ -85,7 +85,7 @@ export default function AnalysisTable() {
               </ul>
             </TableCell>
             <TableCell
-              className="space-y-2 border-r border-b border-[#ccc] px-[16px] py-[8px] text-center font-bold bg-[#f6fafd]"
+              className="space-y-2 border-r border-b border-[#ccc] px-[16px] py-[8px] text-center font-bold bg-[#F8FBFE]"
               colSpan={3}
             >
               <p className="text-lg font-semibold text-[#0186C9]">積極化戦略</p>
@@ -95,20 +95,20 @@ export default function AnalysisTable() {
               <p className="text-start text-[11px] font-medium">
                 クライアント企業は迅速な対応を期待しており、迅速な提案と実行が事業成長を加速させ、信頼感を高める。
               </p>
-              <div className="flex w-full justify-center space-x-6 text-[12px]">
-                <div className="rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+              <div className="flex w-full justify-center space-x-4">
+                <div className="text-sm rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   A案
                 </div>
-                <div className="rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+                <div className="text-sm rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   B案
                 </div>
-                <div className="rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+                <div className="text-sm rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   C案
                 </div>
               </div>
             </TableCell>
             <TableCell
-              className="space-y-2 border-r border-b border-[#ccc] px-[16px] py-[8px] text-center font-bold bg-[#f6fafd]"
+              className="space-y-2 border-r border-b border-[#ccc] px-[16px] py-[8px] text-center font-bold bg-[#F8FBFE]"
               colSpan={3}
             >
               <p className="text-lg font-semibold text-[#0186C9]">改善戦略</p>
@@ -118,14 +118,14 @@ export default function AnalysisTable() {
               <p className="text-start text-[11px] font-medium">
                 クライアント企業は迅速な対応を期待しており、迅速な提案と実行が事業成長を加速させ、信頼感を高める。
               </p>
-              <div className="flex w-full justify-center space-x-6">
-                <div className="text-[12px] rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+              <div className="flex w-full justify-center space-x-4">
+                <div className="text-sm text-[12px] rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   G案
                 </div>
-                <div className="text-[12px] rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+                <div className="text-sm text-[12px] rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   H案
                 </div>
-                <div className="text-[12px] rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+                <div className="text-sm text-[12px] rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   I案
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function AnalysisTable() {
           </TableRow>
           <TableRow className="w-full">
             <TableCell
-              className="space-y-2 border-r border-b border-[#ccc] bg-[#e6f0fa] text-center align-middle font-bold px-[16px] py-[8px]"
+              className="space-y-2 border-r border-b border-[#ccc] bg-[#E2F0F9] text-center align-middle font-bold px-[16px] py-[8px]"
               colSpan={2}
             >
               <p className="text-lg font-semibold">Threat</p>
@@ -150,7 +150,7 @@ export default function AnalysisTable() {
               </ul>
             </TableCell>
             <TableCell
-              className="space-y-2 border-r border-b border-[#ccc] text-center font-bold py-[8px] px-[16px] bg-[#f6fafd]"
+              className="space-y-2 border-r border-b border-[#ccc] text-center font-bold py-[8px] px-[16px] bg-[#F8FBFE]"
               colSpan={3}
             >
               <p className="text-lg font-semibold text-[#0186C9]">防衛戦略</p>
@@ -160,14 +160,14 @@ export default function AnalysisTable() {
               <p className="text-start text-[11px] font-medium">
                 クライアント企業は迅速な対応を期待しており、迅速な提案と実行が事業成長を加速させ、信頼感を高める。
               </p>
-              <div className="flex w-full justify-center space-x-6">
-                <div className="rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+              <div className="flex w-full justify-center space-x-4">
+                <div className="text-sm rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   E案
                 </div>
-                <div className="rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+                <div className="text-sm rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   F案
                 </div>
-                <div className="rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
+                <div className="text-sm rounded-xs flex justify-center items-center border border-[#ccc] px-[8px] py-[8px] w-[65px] h-[24px] bg-[#FFFFFF]">
                   G案
                 </div>
               </div>

@@ -80,8 +80,11 @@ export function Bread() {
 
           return (
             <BreadcrumbItem key={index}>
-              <BreadcrumbLink
-                className={isActive ? "text-[#777777]" : "text-[#212121]"}
+             <BreadcrumbLink
+                className={cn(
+                  "text-[12px]", 
+                  isActive ? "text-[#777777]" : "text-[#212121]"
+                )}
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
               >
