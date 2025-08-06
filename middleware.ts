@@ -4,7 +4,7 @@ export function middleware(req: NextRequest) {
   if (req.nextUrl.pathname.startsWith('/improvement-result')) {
     const basicAuth = req.headers.get('authorization');
     const USER = 'DDAM';
-    const PASS = 'V7b$kR!q2FYp#d';
+    const PASS = 'V7b$kR!q2FYp#dz';
     const validAuth =
       'Basic ' + Buffer.from(`${USER}:${PASS}`).toString('base64');
 
