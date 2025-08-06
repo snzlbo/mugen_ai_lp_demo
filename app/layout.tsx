@@ -5,13 +5,15 @@ import './globals.css';
 
 const notoSans = Noto_Sans_JP({
   variable: '--font-noto-sans',
-  subsets: ['latin'],
+  subsets: ['latin'], 
+  weight: ['400', '700'], 
   adjustFontFallback: false,
 });
 
 const notoMono = Noto_Sans_Mono({
   variable: '--font-noto-mono',
   subsets: ['latin'],
+  weight: ['400', '700'],
   adjustFontFallback: false,
 });
 
