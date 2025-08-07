@@ -115,7 +115,7 @@ export default function ImprovementProposal() {
           <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full border-[1px] border-[#CCCCCC] bg-white px-6 text-[12px] font-semibold text-[#212121] shadow-none hover:bg-[#EEEEEE] hover:text-[#212121]">
             レギュレーションチェック
           </Button>
-          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#212121] pr-[5px] pl-[24px] text-[12px] font-semibold text-white shadow-none hover:bg-[rgba(33,33,33,0.9)]">
+          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#212121] pr-[5px] pl-[24px] text-[12px] font-semibold text-white shadow-none hover:bg-[#212121E5]">
             改善案をダウンロード
             <DownloadIcon className="h-5 w-5" />
           </Button>
