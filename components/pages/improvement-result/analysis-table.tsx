@@ -23,7 +23,7 @@ export default function AnalysisTable() {
         <TableHeader>
           <TableRow>
             <TableHead
-              className="text-foreground border-r border-b border-[#ccc] bg-[#D6EBF7] text-start text-lg font-semibold"
+              className="w-[22%] text-foreground border-r border-b border-[#ccc] bg-[#D6EBF7] text-start text-lg font-semibold"
               rowSpan={2}
               colSpan={3}
             >

@@ -112,10 +112,10 @@ export default function ImprovementProposal() {
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">改善案生成結果</h2>
         <div className="flex gap-3">
-          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-6 text-[12px] font-semibold text-[#212121] shadow-none hover:bg-white hover:text-[#212121]">
+          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full border-[1px] border-[#CCCCCC] bg-white px-6 text-[12px] font-semibold text-[#212121] shadow-none hover:bg-[#EEEEEE] hover:text-[#212121]">
             レギュレーションチェック
           </Button>
-          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#212121] pr-[5px] pl-[24px] text-[12px] font-semibold text-white shadow-none">
+          <Button className="flex h-10 min-w-[192px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#212121] pr-[5px] pl-[24px] text-[12px] font-semibold text-white shadow-none hover:bg-[rgba(33,33,33,0.9)]">
             改善案をダウンロード
             <DownloadIcon className="h-5 w-5" />
           </Button>
